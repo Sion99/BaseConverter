@@ -43,11 +43,11 @@
 
 <body>
     <h1>Base Conversion Service</h1>
-    <form action="/convert" method="POST">
+    <form id="my_form">
         <label for="number">Enter a number:</label>
         <input type="text" id="number" name="number">
-        <label for="from-base">From base:</label>
-        <select id="from-base" name="from-base">
+        <label for="from_base">From base:</label>
+        <select id="from_base" name="from_base">
             <option value="2">2진수</option>
             <option value="3">3진수</option>
             <option value="4">4진수</option>
@@ -64,8 +64,8 @@
             <option value="15">15진수</option>
             <option value="16">16진수</option>
         </select>
-        <label for="to-base">To base:</label>
-        <select id="to-base" name="to-base">
+        <label for="to_base">To base:</label>
+        <select id="to_base" name="to_base">
             <option value="2">2진수</option>
             <option value="3">3진수</option>
             <option value="4">4진수</option>
@@ -84,6 +84,16 @@
         </select>
         <input type="submit" value="Convert">
     </form>
+    <script>
+        document.getElementById('my_form').onsubmit = function () {
+            var number = this.number.value
+            var frombase = this.from_base.value
+            var tobase = this.to_base.value
+            console.log(number)
+            console.log(frombase)
+            console.log(tobase)
+        }
+    </script>
 </body>
 
 </html>
