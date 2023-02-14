@@ -83,15 +83,19 @@
             <option value="16">16진수</option>
         </select>
         <input type="submit" value="Convert">
+        <br>
+        <br>
+        <h2 id="result">결과는 여기 출력됩니다</h2>
     </form>
     <script>
-        document.getElementById('my_form').onsubmit = function () {
+        document.getElementById("my_form").onsubmit = function () {
             var number = this.number.value
             var frombase = this.from_base.value
             var tobase = this.to_base.value
             console.log(number)
             console.log(frombase)
             console.log(tobase)
+            document.getElementById("result").innerHTML = number
         }
     </script>
 </body>
